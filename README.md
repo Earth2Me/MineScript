@@ -13,7 +13,7 @@ git clone git://github.com/Earth2Me/MineScript.git ~/minescript
 sudo mkdir -p /opt
 sudo mv ~/minescript /opt/minecraft
 sudo ln -s /opt/minecraft /mc
-sudo ln -s /opt/minecraft/common/mc /usr/local/bin/mc
+sudo ln -s /opt/minecraft/common/mc /usr/local/bin/mc.sh
 
 sudo useradd -d /opt/minecraft -rU -s /usr/sbin/nologin mc
 sudo usermod -aG mc $USER
