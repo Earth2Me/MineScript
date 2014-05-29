@@ -1,0 +1,26 @@
+# vim: ft=upstart
+
+# TODO: Make a link to this file in /etc/init/
+
+author "Paul Buonopane (Zenexer)"
+description "Minecraft server: Example" # TODO: Change me
+
+env server="example" # TODO: Change me
+
+start on minecraft-starting
+stop on minecraft-stopping
+
+respawn
+respawn limit 3 20
+
+setuid mc
+setgid mc
+
+script
+	/mc/common/server.sh "$server"
+end script
+
+post-stop script
+	rm "/mc/servers/$server/.input"
+end script
+
