@@ -21,7 +21,7 @@ sudo chgrp -R mc /opt/minecraft
 sudo chown -R mc /opt/minecraft/servers
 sudo chmod -R g+w /opt/minecraft
 sudo chown -R root:root /opt/minecraft/init
-sudo chown -R g-w /opt/minecraft/common
+sudo chmod -R g-w /opt/minecraft/common
 ~~~
 
 1. Log out and back in.  If you're using tmux/screen/byobu, you'll need to exit all windows as well and start a fresh session.
